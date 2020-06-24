@@ -1,4 +1,4 @@
-sing # followed by space
+# Heading using # followed by space
 ## sub headings using more ## signs
 ###### heading6 with six hashes
 Just some text
