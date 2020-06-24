@@ -32,7 +32,7 @@ Just some text
 ![alt text](images/200.png)
 ```
 
-![alt text](images/myimage)
+![alt text](images/200.png)
 
 ## Block quote
 > block quote using >
