@@ -29,7 +29,7 @@ Just some text
 
 ```
 <img src="images/200.png" width="100" ❯
-![alt text](images/myimage)
+![alt text](images/200.png)
 ```
 
 ![alt text](images/myimage)
