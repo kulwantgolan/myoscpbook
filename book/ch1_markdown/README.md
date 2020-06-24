@@ -28,7 +28,7 @@ Just some text
 - Use image folder and relative path to image. 
 
 ```
-<img src="images/200" width="100" ❯
+<img src="images/200.png" width="100" ❯
 ![alt text](images/myimage)
 ```
 
