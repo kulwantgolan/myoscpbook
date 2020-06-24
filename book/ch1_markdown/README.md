@@ -1,6 +1,6 @@
 # Heading using # followed by space
 ## sub headings using more ## signs
-###### heading6 with six hashes
+###### heading6 with six ###### hashes followed by space
 Just some text
 ..more text on different line but appearing on same line (in std markdown but not in github flavoured)
 
@@ -17,10 +17,22 @@ Just some text
 ## Links
 [brackets for description of link](url in paranthesis)
 
+
+[brackets for description of link](url in paranthesis)
+
 ## Images
-like links but having ! in begining
+- Like links but having ! in begining `![alt text](URL/relative_path)`
 
 ![alt text](http://picsum.photos/200/200)
+
+- Use image folder and relative path to image. 
+
+```
+<img src="images/200" width="100" ❯
+![alt text](images/myimage)
+```
+
+![alt text](images/myimage)
 
 ## Block quote
 > block quote using >
@@ -52,4 +64,4 @@ let num = Math.random();
 ```
 
 
-Used Brackets editor with Brackets Markdown preview plugin to preview as you type
+> Used Brackets editor with Brackets Markdown preview plugin to preview as you type

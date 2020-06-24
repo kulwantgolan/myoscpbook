@@ -2,18 +2,6 @@
 
 1. git clone the myoscpbook folder
 2. Set up `~/.gitconfig file
-
-```
-# Setup Github
-
-1. git clone the myoscpbook folder
-2. Set up `~/.gitconfig file
-
-```
-# Setup Github
-
-1. git clone the myoscpbook folder
-2. Set up `~/.gitconfig file
   - Setup User
   - Use SSH instead of https
 
@@ -43,6 +31,8 @@ Add ssh public key(id_rsa.pub) in github > Settings > SSH and GPG keys.
    
 ```
 git add .
+git status
 git commit -m "Message"
+git log
 git push origin master
 ```
