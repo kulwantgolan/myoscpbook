@@ -1,0 +1,32 @@
++++++++++++++++
+SMTP creds
++++++++++++++++
+orestis@brainfuck.htb
+orestis
+kHGuERB29DNiNE
+
++++++++++++++++
+Hi there, your credentials for our "secret" forum are below :)
++++++++++++++++
+username: orestis
+password: kIEnnfEKJ#9UmdO
+
++++++++++++++++
+SSH key
++++++++++++++++
+3poulakia!
+
++++++++++++++++
+/root/root.txt
++++++++++++++++
+pt: 24604052029401386049980296953784287079059245867880966944246662849341507003750
+root@kali:~/myoscpbook/htb/brainfuck# python
+Python 2.7.18 (default, Apr 20 2020, 20:30:41) 
+>>> pt = 24604052029401386049980296953784287079059245867880966944246662849341507003750
+>>> print hex(pt)
+0x3665666331613564626238393034373531636536353636613330356262386566L
+>>> print hex(pt)[2:-1]
+3665666331613564626238393034373531636536353636613330356262386566
+>>> print hex(pt)[2:-1].decode('hex')
+6efc1a5dbb8904751ce6566a305bb8ef
+

