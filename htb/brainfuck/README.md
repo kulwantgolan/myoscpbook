@@ -3,7 +3,9 @@
 
 ```bash
 root@kali:~/playground/brainfuck# nmap -sC -sC -oA nmap 10.10.10.17
-Starting Nmap 7.80 ( https://nmap.org ) at 2020-07-01 19:29 EDT
+
+<details>
+    <summary>Starting Nmap 7.80 ( https://nmap.org ) at 2020-07-01 19:29 EDT </summary>
 Nmap scan report for brainfuck.htb (10.10.10.17)
 Host is up (0.29s latency).
 Not shown: 995 filtered ports
@@ -35,13 +37,16 @@ Nmap done: 1 IP address (1 host up) scanned in 62.84 seconds
 
 ```
 ![nmap result](_images/nmap.png)
-
+</details>
   
 
 2. We see 443 is open (Access to website over https) plus there is email server related ports open
-    - We Interogate the certificate
+
+<details>
+    <summary>We Interogate the certificate</summary> 
 ![email](_images/email.png)
-    
+
+</details>    
     `oretis@brainfuck.htb`
 
 3. From nmap as well as from certificates we know CN(common names) and SAN (Subject alternative name). Added that to host file.
@@ -50,12 +55,14 @@ Nmap done: 1 IP address (1 host up) scanned in 62.84 seconds
 echo "10.10.10.17 www.brainfuck.htb sup3rs3cr3t.brainfuck.htb brainfuck.htb" >> /etc/hosts
 ```
 
-4. Wordpress
+4. Wordpress Scan
 
-```
+```bash
 wpscan --url https://brainfuck.htb --disable-tls-checks
+wpscan --url https://brainfuck.htb --disable-tls-checks -e u    #enumerate users
 ```
-
+<details>
+    <summary>result</summary>
 ```bash
 [+] URL: https://brainfuck.htb/ [10.10.10.17]
 [+] Started: Thu Jul  2 01:34:14 2020
@@ -144,7 +151,41 @@ Interesting Finding(s):
 [+] Memory used: 208.148 MB
 [+] Elapsed time: 00:00:14
 root@kali:~/playground/brainfuck#
+
+
+[i] User(s) Identified:
+
+[+] admin
+ | Found By: Author Posts - Display Name (Passive Detection)
+ | Confirmed By:
+ |  Rss Generator (Passive Detection)
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[+] administrator
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+</details>
+
+5. Search Exploit
+
+<details>
+    <summary>searchsploit wordpress responsive</summary>
+
+
+
 ```
+
+WordPress Plugin WP Support Plus Responsive Ticket System 2.0 - Multiple Vulnerabilities                                                                                                                 | php/webapps/34589.txt
+WordPress Plugin WP Support Plus Responsive Ticket System 7.1.3 - Privilege Escalation                                                                                                                   | php/webapps/41006.txt
+WordPress Plugin WP Support Plus Responsive Ticket System 7.1.3 - SQL Injection                                                                                                                          | php/webapps/40939.txt
+WordPress Theme Think Responsive 1.0 - Arbitrary File Upload                                                                                                                                             | php/webapps/29332.txt
+
+
+```
+</details>
+
 
 <details>
 	<summary> Failed attempts</summary>
