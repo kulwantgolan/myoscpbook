@@ -1,10 +1,13 @@
 # 10.10.10.17
 1. Initial Scan
 
+<details>
+    <summary>Starting Nmap </summary>
+    
 ```bash
 root@kali:~/playground/brainfuck# nmap -sC -sC -oA nmap 10.10.10.17
 
-<details>
+
     <summary>Starting Nmap 7.80 ( https://nmap.org ) at 2020-07-01 19:29 EDT </summary>
 Nmap scan report for brainfuck.htb (10.10.10.17)
 Host is up (0.29s latency).
@@ -43,7 +46,8 @@ Nmap done: 1 IP address (1 host up) scanned in 62.84 seconds
 2. We see 443 is open (Access to website over https) plus there is email server related ports open
 
 <details>
-    <summary>We Interogate the certificate</summary> 
+    <summary>We Interogate the certificate</summary>
+    
 ![email](_images/email.png)
 
 </details>    
@@ -62,7 +66,7 @@ wpscan --url https://brainfuck.htb --disable-tls-checks
 wpscan --url https://brainfuck.htb --disable-tls-checks -e u    #enumerate users
 ```
 <details>
-    <summary>result</summary>
+    <summary>wpscan result</summary>
 ```bash
 [+] URL: https://brainfuck.htb/ [10.10.10.17]
 [+] Started: Thu Jul  2 01:34:14 2020
@@ -186,7 +190,7 @@ WordPress Theme Think Responsive 1.0 - Arbitrary File Upload                    
 ```
 </details>
 
-
+___________________________________________
 <details>
 	<summary> Failed attempts</summary>
 
