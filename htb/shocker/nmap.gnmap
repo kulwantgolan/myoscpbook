@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Fri Jun 26 01:56:19 2020 as: nmap -sC -sV -oA nmap 10.10.10.56
+Host: 10.10.10.56 (10-10-10-56.tpgi.com.au)	Status: Up
+Host: 10.10.10.56 (10-10-10-56.tpgi.com.au)	Ports: 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/, 2222/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)/	Ignored State: closed (998)
+# Nmap done at Fri Jun 26 01:56:41 2020 -- 1 IP address (1 host up) scanned in 21.92 seconds
