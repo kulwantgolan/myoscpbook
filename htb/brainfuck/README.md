@@ -174,6 +174,7 @@ root@kali:~/playground/brainfuck#
  | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
  | Confirmed By: Login Error Messages (Aggressive Detection)
 
+```
 </details>
 
 
