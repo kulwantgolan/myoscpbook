@@ -1,8 +1,7 @@
 # 10.10.10.17
-1. Initial Scan
 
 <details>
-    <summary>Starting Nmap </summary>
+    <summary>1. Starting Nmap </summary>
     
 ```bash
 root@kali:~/playground/brainfuck# nmap -sC -sC -oA nmap 10.10.10.17
@@ -45,23 +44,25 @@ Nmap done: 1 IP address (1 host up) scanned in 62.84 seconds
 
 > We see 443 is open (Access to website over https) plus there is email server related ports open
 
-2. We Interogate the certificate
+>  We Interogate the certificate
 <details>
-    <summary>oretis@brainfuck.htb</summary>
+    <summary>See certificate</summary>
     
 ![email](_images/email.png)
 
 </details>
 
-> `oretis@brainfuck.htb`
+> Email: `oretis@brainfuck.htb`
 
-> From nmap as well as from certificates we know CN(common names) and SAN (Subject alternative name). Added that to host file.
+> From nmap as well as from certificates we know `CN(common names)` and `SAN (Subject alternative name)`. Added that to host file.
+
+2. Check website on port SSL (https://) but before that update `hosts` file
 
 ```
 echo "10.10.10.17 www.brainfuck.htb sup3rs3cr3t.brainfuck.htb brainfuck.htb" >> /etc/hosts
 ```
 
-3. Wordpress Scan
+3. Conduct Worpress Scan
 
 ```bash
 wpscan --url https://brainfuck.htb --disable-tls-checks
@@ -174,18 +175,18 @@ root@kali:~/playground/brainfuck#
 
 </details>
 
+> plugin: wp-support-plus-responsive-ticket-system 7.1.3
+> admin and administrator users exist
 
-4. Search Exploit
+4. Search for the exploit to worpress 
 <details>
-    <summary>searchsploit wordpress responsive</summary>
+    <summary>`searchsploit wordpress responsive`</summary>
 
 ```
-
 WordPress Plugin WP Support Plus Responsive Ticket System 2.0 - Multiple Vulnerabilities                                                                                                                 | php/webapps/34589.txt
 WordPress Plugin WP Support Plus Responsive Ticket System 7.1.3 - Privilege Escalation                                                                                                                   | php/webapps/41006.txt
 WordPress Plugin WP Support Plus Responsive Ticket System 7.1.3 - SQL Injection                                                                                                                          | php/webapps/40939.txt
 WordPress Theme Think Responsive 1.0 - Arbitrary File Upload                                                                                                                                             | php/webapps/29332.txt
-
 
 ```
 </details>
