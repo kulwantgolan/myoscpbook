@@ -175,12 +175,14 @@ root@kali:~/playground/brainfuck#
 
 </details>
 
-> plugin: wp-support-plus-responsive-ticket-system 7.1.3
-> admin and administrator users exist
+~~~
+plugin: wp-support-plus-responsive-ticket-system 7.1.3
+admin and administrator users exist
+~~~
 
 4. Search for the exploit to worpress 
 <details>
-    <summary>`searchsploit wordpress responsive`</summary>
+    <summary>searchsploit wordpress responsive</summary>
 
 ```
 WordPress Plugin WP Support Plus Responsive Ticket System 2.0 - Multiple Vulnerabilities                                                                                                                 | php/webapps/34589.txt
