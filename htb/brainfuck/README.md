@@ -43,23 +43,25 @@ Nmap done: 1 IP address (1 host up) scanned in 62.84 seconds
 </details>
   
 
-2. We see 443 is open (Access to website over https) plus there is email server related ports open
+> We see 443 is open (Access to website over https) plus there is email server related ports open
 
+2. We Interogate the certificate
 <details>
-    <summary>We Interogate the certificate</summary>
+    <summary>oretis@brainfuck.htb</summary>
     
 ![email](_images/email.png)
 
-</details>    
-    `oretis@brainfuck.htb`
+</details>
 
-3. From nmap as well as from certificates we know CN(common names) and SAN (Subject alternative name). Added that to host file.
+> `oretis@brainfuck.htb`
+
+> From nmap as well as from certificates we know CN(common names) and SAN (Subject alternative name). Added that to host file.
 
 ```
 echo "10.10.10.17 www.brainfuck.htb sup3rs3cr3t.brainfuck.htb brainfuck.htb" >> /etc/hosts
 ```
 
-4. Wordpress Scan
+3. Wordpress Scan
 
 ```bash
 wpscan --url https://brainfuck.htb --disable-tls-checks
@@ -172,12 +174,10 @@ root@kali:~/playground/brainfuck#
 
 </details>
 
-5. Search Exploit
 
+4. Search Exploit
 <details>
     <summary>searchsploit wordpress responsive</summary>
-
-
 
 ```
 
