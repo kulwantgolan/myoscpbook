@@ -70,6 +70,7 @@ wpscan --url https://brainfuck.htb --disable-tls-checks -e u    #enumerate users
 ```
 <details>
     <summary>wpscan result</summary>
+    
 ```bash
 [+] URL: https://brainfuck.htb/ [10.10.10.17]
 [+] Started: Thu Jul  2 01:34:14 2020
